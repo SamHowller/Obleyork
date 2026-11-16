@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBLEYORK | Obleas y postres colombianos en Nueva York</title>
+    <meta name="description" content="Obleas, solteritas, mazamorra y bowls de fresas con crema al estilo colombiano en Nueva York. Pick-up en Queens y Brooklyn y delivery en NYC. Pide por WhatsApp.">
+    <meta name="theme-color" content="#422517">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <!-- Open Graph / redes sociales
+         IMPORTANTE: cuando tengas dominio, cambia og:image y og:url por URLs absolutas
+         (ej. https://tudominio.com/img/og-image.jpg). WhatsApp e Instagram solo muestran
+         la vista previa con URLs absolutas. -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="OBLEYORK">
+    <meta property="og:title" content="OBLEYORK | Un pedacito de Colombia en Nueva York">
+    <meta property="og:description" content="Obleas, solteritas, mazamorra y bowls colombianos. Pick-up en Queens / Brooklyn y delivery en NYC. ¡Pide por WhatsApp!">
+    <meta property="og:image" content="img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_US">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Datos estructurados para Google (negocio local) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Bakery",
+        "name": "OBLEYORK",
+        "description": "Obleas, solteritas, mazamorra y bowls colombianos en Nueva York.",
+        "image": "img/og-image.jpg",
+        "logo": "img/logo.webp",
+        "telephone": "+1-347-685-0914",
+        "servesCuisine": "Colombian",
+        "priceRange": "$",
+        "areaServed": ["Queens", "Brooklyn", "New York City"],
+        "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US" },
+        "sameAs": ["https://www.instagram.com/obleyork"],
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "14:00",
+            "closes": "22:00"
+        }]
+    }
+    </script>
+
+    <!-- Estilos compilados con Tailwind CLI (ver README.md para regenerarlos) -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Lucide Icons (versión fija) -->
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Medición (opcional). Para activar Plausible, descomenta y pon tu dominio:
+    <script defer data-domain="tudominio.com" src="https://plausible.io/js/script.js"></script>
+    -->
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased bg-textured">
+
+    <a href="#menu" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] bg-white text-brand-cacao px-4 py-2 rounded-lg shadow" data-i18n="skip">Saltar al menú</a>
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-cacao text-brand-cream text-xs sm:text-sm font-medium py-2 px-4 text-center flex flex-wrap justify-center items-center gap-x-2 gap-y-1 shadow-inner">
+        <i data-lucide="map-pin" class="w-4 h-4 text-brand-caramel"></i>
+        <span data-i18n="announce">Envíos en Nueva York y pick-up en Queens / Brooklyn</span>
+        <span class="font-bold text-brand-caramel" data-i18n="announceCta">¡Haz tu pedido directo a WhatsApp!</span>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 glass-header border-b border-brand-caramel/20 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
+            <a href="#" class="flex items-center gap-2 group" aria-label="OBLEYORK – inicio">
+                <img src="img/apple-touch-icon.png" alt="" width="44" height="44" class="w-11 h-11 rounded-full shadow-md group-hover:scale-105 transition-transform">
+                <div class="flex flex-col">
+                    <span class="font-title font-extrabold text-xl sm:text-2xl tracking-wider text-brand-cacao leading-none">OBLEYORK</span>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-brand-terracotta">Colombian Flavors NYC</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links (desktop) -->
+            <nav class="hidden md:flex items-center space-x-7 font-medium text-sm text-brand-cacao" aria-label="Principal">
+                <a href="#menu" class="hover:text-brand-terracotta transition-colors" data-i18n="navMenu">Menú</a>
+                <a href="#builder" class="hover:text-brand-terracotta transition-colors flex items-center gap-1">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-brand-caramel"></i> <span data-i18n="navBuilder">Arma tu oblea</span>
+                </a>
+                <a href="#gallery" class="hover:text-brand-terracotta transition-colors" data-i18n="navGallery">Galería</a>
+                <a href="#reviews" class="hover:text-brand-terracotta transition-colors" data-i18n="navReviews">Reseñas</a>
+                <a href="#about" class="hover:text-brand-terracotta transition-colors" data-i18n="navHow">¿Cómo pedir?</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-2">
+                <button id="langBtn" type="button" class="font-bold text-xs text-brand-cacao border border-brand-caramel/40 rounded-full px-3 py-2 hover:bg-brand-caramel/20 transition-colors" aria-label="Change language / Cambiar idioma">EN</button>
+                <button id="cartBtn" type="button" class="relative bg-brand-terracotta hover:bg-brand-terracotta/90 text-white p-3 rounded-full shadow-md hover:shadow-lg transition-all flex items-center gap-2" data-i18n-aria="openCart" aria-label="Abrir carrito">
+                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    <span class="hidden sm:inline font-bold text-sm" data-i18n="cartBtn">Tu antojo</span>
+                    <span id="cartCount" class="bg-brand-cream text-brand-cacao font-bold text-xs rounded-full w-5 h-5 flex items-center justify-center border border-brand-terracotta">0</span>
+                </button>
+                <button id="menuBtn" type="button" class="md:hidden text-brand-cacao p-2 rounded-lg hover:bg-brand-caramel/20" aria-expanded="false" aria-controls="mobileMenu" data-i18n-aria="openMenu" aria-label="Abrir menú">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <nav id="mobileMenu" class="md:hidden hidden border-t border-brand-caramel/20 bg-brand-cream" aria-label="Móvil">
+            <div class="px-4 py-3 flex flex-col font-medium text-brand-cacao">
+                <a href="#menu" class="py-3 border-b border-brand-caramel/10" data-i18n="navMenu">Menú</a>
+                <a href="#builder" class="py-3 border-b border-brand-caramel/10" data-i18n="navBuilder">Arma tu oblea</a>
+                <a href="#gallery" class="py-3 border-b border-brand-caramel/10" data-i18n="navGallery">Galería</a>
+                <a href="#reviews" class="py-3 border-b border-brand-caramel/10" data-i18n="navReviews">Reseñas</a>
+                <a href="#about" class="py-3" data-i18n="navHow">¿Cómo pedir?</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-b from-brand-cream/80 via-brand-lightBg/50 to-brand-cream/80 py-12 md:py-20 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center md:text-left z-10">
+                    <div class="inline-flex items-center gap-2 bg-brand-caramel/20 text-brand-cacao px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+                        <i data-lucide="heart" class="w-4 h-4 text-brand-terracotta fill-brand-terracotta"></i>
+                        <span data-i18n="heroBadge">Tradición colombiana auténtica</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-cacao leading-tight" data-i18n-html="heroTitle">
+                        Un pedacito de <span class="text-brand-terracotta underline decoration-brand-caramel decoration-wavy decoration-2">Colombia</span> en cada bocado
+                    </h1>
+                    <p class="text-lg text-brand-dark/80 max-w-xl" data-i18n="heroText">
+                        Obleas crujientes, solteritas, mazamorra y bowls especiales, preparados frescos en Nueva York.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
+                        <a href="#menu" class="bg-brand-terracotta hover:bg-brand-terracotta/90 text-white font-bold py-3.5 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all text-center flex items-center justify-center gap-2">
+                            <i data-lucide="utensils" class="w-5 h-5"></i> <span data-i18n="heroCta1">Ver el menú</span>
+                        </a>
+                        <a href="#builder" class="bg-white border-2 border-brand-cacao text-brand-cacao hover:bg-brand-cacao hover:text-white font-bold py-3.5 px-8 rounded-xl transition-all text-center flex items-center justify-center gap-2">
+                            <i data-lucide="wand-2" class="w-5 h-5"></i> <span data-i18n="heroCta2">Arma tu antojo</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative flex justify-center">
+                    <div class="absolute -top-4 -bottom-4 w-72 h-72 md:w-96 md:h-96 bg-brand-caramel/20 rounded-full blur-3xl -z-10"></div>
+                    <div class="relative bg-white p-4 rounded-3xl shadow-2xl border-4 border-brand-cream rotate-2 hover:rotate-0 transition-transform duration-500 max-w-sm sm:max-w-md">
+                        <img src="img/casado.webp" alt="Casado de OBLEYORK: bowl con oblea, arequipe, bocadillo y queso" width="675" height="1200" fetchpriority="high" class="rounded-2xl w-full h-80 object-cover">
+                        <div class="absolute -bottom-6 -left-6 bg-brand-cacao text-white p-4 rounded-2xl shadow-xl flex items-center gap-3 border border-brand-caramel">
+                            <i data-lucide="award" class="w-8 h-8 text-brand-caramel"></i>
+                            <div>
+                                <p class="text-xs text-brand-caramel uppercase font-bold tracking-wider" data-i18n="heroFav">Favorita del mes</p>
+                                <p class="font-title font-bold text-sm">Casado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured / Más pedidos -->
+        <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-labelledby="featuredTitle">
+            <div class="flex items-end justify-between mb-6">
+                <div>
+                    <span class="text-brand-terracotta text-xs font-bold uppercase tracking-wider" data-i18n="featuredKicker">Favoritos de la casa</span>
+                    <h2 id="featuredTitle" class="text-3xl font-extrabold text-brand-cacao" data-i18n="featuredTitle">Los más pedidos</h2>
+                </div>
+            </div>
+            <div id="featuredGrid" class="flex gap-4 overflow-x-auto pb-3 custom-scrollbar snap-x"></div>
+        </section>
+
+        <!-- Dynamic Category Navigation -->
+        <section class="py-8 bg-white/80 backdrop-blur-md border-y border-brand-caramel/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-xl font-bold text-brand-cacao" data-i18n="categories">Categorías</h2>
+                    <span class="text-xs text-brand-dark/75 font-medium" data-i18n="categoriesHint">Selecciona para filtrar</span>
+                </div>
+                <div id="categoryContainer" class="flex gap-4 overflow-x-auto pb-2 custom-scrollbar" role="group"></div>
+            </div>
+        </section>
+
+        <!-- Search and Catalog Section -->
+        <section id="menu" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-brand-cacao" data-i18n="catalogTitle">Catálogo completo</h2>
+                    <p class="text-sm text-brand-dark/75" data-i18n="catalogText">Antojitos preparados al instante con insumos colombianos</p>
+                </div>
+                <div class="relative w-full md:w-80">
+                    <i data-lucide="search" class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-brand-dark/60"></i>
+                    <input type="search" id="searchInput" data-i18n-placeholder="searchPh" placeholder="Buscar obleas, solteritas, bowls..." data-i18n-aria="searchPh" aria-label="Buscar productos" class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-brand-caramel/30 bg-white focus:outline-none focus:ring-2 focus:ring-brand-terracotta text-sm shadow-sm">
+                </div>
+            </div>
+            <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </section>
+
+        <!-- Custom Oblea Interactive Builder -->
+        <section id="builder" class="py-16 bg-brand-lightBg/90 border-y border-brand-caramel/20 backdrop-blur-sm scroll-mt-24">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="bg-brand-green/20 text-brand-green text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider" data-i18n="builderKicker">Hazla a tu gusto</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-cacao mt-2" data-i18n="builderTitle">Constructor de antojos</h2>
+                    <p class="text-brand-dark/75 mt-2" data-i18n="builderText">Elige el tamaño, quita o deja los clásicos y súmale toppings. El precio se calcula al instante.</p>
+                </div>
+
+                <div class="bg-white/95 rounded-3xl p-6 sm:p-8 shadow-xl border border-brand-caramel/20 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-6">
+                        <fieldset>
+                            <legend class="block font-title font-bold text-brand-cacao text-lg mb-2" data-i18n="builderStep1">1. Tamaño de la oblea *</legend>
+                            <div class="grid grid-cols-3 gap-3" id="builderSizeOptions"></div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="block font-title font-bold text-brand-cacao text-lg mb-2" data-i18n="builderStep2">2. Clásicos incluidos</legend>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="builderClassicOptions"></div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="block font-title font-bold text-brand-cacao text-lg mb-2" data-i18n="builderStep3">3. Toppings extra (opcionales)</legend>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="builderExtraOptions"></div>
+                        </fieldset>
+                        <div>
+                            <label for="builderNotes" class="block font-medium text-brand-cacao text-sm mb-1" data-i18n="builderNotes">Indicaciones especiales</label>
+                            <input type="text" id="builderNotes" maxlength="200" data-i18n-placeholder="builderNotesPh" placeholder="Ej. doble queso, mermelada aparte..." class="w-full px-4 py-2 rounded-xl border border-brand-caramel/30 text-sm focus:outline-none focus:ring-2 focus:ring-brand-terracotta">
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-cream/80 p-6 rounded-2xl border border-brand-caramel/30 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-title font-bold text-xl text-brand-cacao border-b border-brand-caramel/20 pb-3 mb-4" data-i18n="builderSummary">Resumen de tu creación</h3>
+                            <div id="builderSummaryContent" class="space-y-2 text-sm text-brand-dark/80 mb-6" aria-live="polite"></div>
+                        </div>
+                        <div class="border-t border-brand-caramel/20 pt-4 space-y-4">
+                            <div class="flex justify-between items-baseline">
+                                <span class="text-sm font-medium text-brand-dark/75" data-i18n="total">Total:</span>
+                                <span id="builderTotalPrice" class="text-2xl font-extrabold text-brand-terracotta">$0.00</span>
+                            </div>
+                            <button id="addBuilderToCartBtn" type="button" class="w-full bg-brand-terracotta hover:bg-brand-terracotta/90 text-white font-bold py-3 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2">
+                                <i data-lucide="plus-circle" class="w-5 h-5"></i>
+                                <span data-i18n="builderAdd">Agregar oblea al carrito</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+            <div class="text-center max-w-xl mx-auto mb-10">
+                <h2 class="text-3xl font-extrabold text-brand-cacao" data-i18n="galleryTitle">Sabor que entra por los ojos</h2>
+                <p class="text-brand-dark/75 text-sm mt-1" data-i18n="galleryText">Nuestras preparaciones artesanales, recién hechas</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="galleryGrid"></div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="py-16 bg-white/80 backdrop-blur-md border-t border-brand-caramel/20 scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-xl mx-auto mb-12">
+                    <span class="text-brand-terracotta text-xs font-bold uppercase tracking-wider" data-i18n="reviewsKicker">Opiniones</span>
+                    <h2 class="text-3xl font-extrabold text-brand-cacao mt-1" data-i18n="reviewsTitle">Lo que dicen nuestros clientes</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6" id="reviewsContainer"></div>
+                <div class="text-center mt-8">
+                    <a href="https://www.instagram.com/obleyork" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-brand-cacao hover:text-brand-terracotta">
+                        <span data-i18n="reviewsMore">Mira más en nuestro Instagram</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ordering Guide / About -->
+        <section id="about" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+            <div class="bg-brand-cacao text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="max-w-2xl relative z-10 space-y-6">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-caramel" data-i18n="howTitle">¿Cómo funciona tu pedido?</h2>
+                    <div class="grid sm:grid-cols-3 gap-6 pt-4">
+                        <div class="space-y-2">
+                            <div class="w-10 h-10 rounded-full bg-brand-terracotta text-white flex items-center justify-center font-bold text-lg">1</div>
+                            <h3 class="font-bold font-title" data-i18n="how1t">Selecciona</h3>
+                            <p class="text-sm text-brand-cream/90" data-i18n="how1">Escoge tus productos o arma tu oblea a tu gusto.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="w-10 h-10 rounded-full bg-brand-terracotta text-white flex items-center justify-center font-bold text-lg">2</div>
+                            <h3 class="font-bold font-title" data-i18n="how2t">Revisa tu carrito</h3>
+                            <p class="text-sm text-brand-cream/90" data-i18n="how2">Verifica cantidades, elige pick-up o delivery y el día y la hora.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="w-10 h-10 rounded-full bg-brand-terracotta text-white flex items-center justify-center font-bold text-lg">3</div>
+                            <h3 class="font-bold font-title" data-i18n="how3t">Envía a WhatsApp</h3>
+                            <p class="text-sm text-brand-cream/90" data-i18n="how3">Generamos el mensaje listo y te confirmamos disponibilidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white/85 py-12 border-t border-brand-cacao">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="font-title text-2xl font-bold text-brand-cream mb-2">OBLEYORK</h3>
+                <p class="text-sm text-white/80 mb-4" data-i18n="footerAbout">"Un pedacito de Colombia en cada bocado". Llevamos la tradición y la dulzura colombiana a Nueva York.</p>
+                <div class="flex gap-4 text-brand-caramel">
+                    <a href="https://www.instagram.com/obleyork" target="_blank" rel="noopener" class="hover:text-white transition-colors" aria-label="Instagram @obleyork">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://wa.me/13476850914" target="_blank" rel="noopener" class="hover:text-white transition-colors" aria-label="WhatsApp +1 (347) 685-0914">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.15-.17.2-.34.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.64-2.05-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.66-1.6-.91-2.19-.24-.57-.48-.5-.66-.5h-.57c-.2 0-.52.08-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.37 9.37 0 0 1 2.76 6.68c0 5.2-4.24 9.43-9.45 9.43m8.04-17.47A11.3 11.3 0 0 0 12.05.7C5.78.7.67 5.8.67 12.07c0 2 .52 3.96 1.52 5.69L.57 23.7l6.08-1.6a11.3 11.3 0 0 0 5.4 1.38h.01c6.27 0 11.38-5.1 11.38-11.38 0-3.04-1.18-5.9-3.33-8.05"/></svg>
+                    </a>
+                    <a href="tel:+13476850914" class="hover:text-white transition-colors" data-i18n-aria="call" aria-label="Llamar al +1 (347) 685-0914">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                    </a>
+                </div>
+                <p class="text-sm text-white/80 mt-3">+1 (347) 685-0914 · @obleyork</p>
+            </div>
+            <div>
+                <h4 class="font-title font-bold text-white mb-3 text-sm uppercase tracking-wider" data-i18n="footerHoursT">Horario y atención</h4>
+                <p class="text-sm text-white/80" data-i18n="footerHours">Jueves a domingo: 2:00 PM – 10:00 PM</p>
+                <p class="text-sm text-white/80 mt-1" data-i18n="footerPickup">Pick-up en zonas designadas de Queens / Brooklyn</p>
+                <p class="text-sm text-brand-caramel mt-2 font-medium" data-i18n="footerConfirm">* Confirmamos cada pedido por WhatsApp.</p>
+            </div>
+            <div>
+                <h4 class="font-title font-bold text-white mb-3 text-sm uppercase tracking-wider" data-i18n="footerLegalT">Aviso legal y alérgenos</h4>
+                <p class="text-sm text-white/80 leading-relaxed" data-i18n="footerLegal">Los precios están en USD. Enviar el pedido por WhatsApp no genera ningún cobro; la confirmación final y el método de pago se acuerdan directamente con nosotros.</p>
+                <p class="text-sm text-white/80 leading-relaxed mt-2" data-i18n="footerAllergens">Alérgenos: nuestros productos contienen lácteos y muchos contienen gluten. Si tienes alguna alergia, avísanos en las notas del pedido.</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-white/10 text-center text-xs text-white/70">
+            © <span id="year">2026</span> OBLEYORK. <span data-i18n="rights">Todos los derechos reservados.</span>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp button -->
+    <a id="waFloat" href="https://wa.me/13476850914" target="_blank" rel="noopener" class="fixed bottom-5 right-5 z-30 bg-green-600 hover:bg-green-700 text-white w-14 h-14 rounded-full shadow-xl flex items-center justify-center transition-transform hover:scale-105" data-i18n-aria="waFloat" aria-label="Escríbenos por WhatsApp">
+        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.15-.17.2-.34.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.64-2.05-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.66-1.6-.91-2.19-.24-.57-.48-.5-.66-.5h-.57c-.2 0-.52.08-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.37 9.37 0 0 1 2.76 6.68c0 5.2-4.24 9.43-9.45 9.43m8.04-17.47A11.3 11.3 0 0 0 12.05.7C5.78.7.67 5.8.67 12.07c0 2 .52 3.96 1.52 5.69L.57 23.7l6.08-1.6a11.3 11.3 0 0 0 5.4 1.38h.01c6.27 0 11.38-5.1 11.38-11.38 0-3.04-1.18-5.9-3.33-8.05"/></svg>
+    </a>
+
+    <!-- Toast -->
+    <div id="toast" role="status" aria-live="polite" class="fixed left-1/2 -translate-x-1/2 top-24 z-[45] w-max max-w-[92vw] bg-brand-cacao text-white text-sm font-bold px-5 py-3 rounded-full shadow-xl flex items-center gap-3 opacity-0 pointer-events-none -translate-y-4 transition-all duration-300">
+        <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-caramel"></i>
+        <span id="toastText" class="truncate">Agregado</span>
+        <button id="toastViewCart" type="button" class="underline text-brand-caramel whitespace-nowrap shrink-0" data-i18n="viewCart">Ver carrito</button>
+    </div>
+
+    <!-- Shopping Cart Drawer -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 invisible transition-all duration-300" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+        <div id="cartBackdrop" class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-brand-cream shadow-2xl flex flex-col translate-x-full transition-transform duration-300 id-cart-panel">
+            <div class="p-4 sm:p-6 bg-brand-cacao text-white flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="shopping-bag" class="w-6 h-6 text-brand-caramel"></i>
+                    <h2 id="cartTitle" class="font-title font-bold text-xl" data-i18n="cartTitle">Tu pedido</h2>
+                </div>
+                <button id="closeCartBtn" type="button" class="text-white/80 hover:text-white p-1" data-i18n-aria="close" aria-label="Cerrar">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <div class="flex-grow overflow-y-auto custom-scrollbar">
+                <div id="cartItemsContainer" class="p-4 sm:p-6 space-y-4"></div>
+
+                <!-- Checkout form -->
+                <div id="checkoutForm" class="p-4 sm:p-6 bg-white border-t border-brand-caramel/20 space-y-3">
+                    <div>
+                        <label for="customerName" class="block text-xs font-bold text-brand-cacao uppercase tracking-wider mb-1" data-i18n="fName">Tu nombre *</label>
+                        <input type="text" id="customerName" autocomplete="name" maxlength="80" placeholder="Ej. María Rodríguez" class="w-full px-3 py-2 rounded-lg border border-brand-caramel/30 text-sm focus:outline-none focus:ring-2 focus:ring-brand-terracotta">
+                    </div>
+                    <div>
+                        <label for="deliveryMethod" class="block text-xs font-bold text-brand-cacao uppercase tracking-wider mb-1" data-i18n="fMethod">Método *</label>
+                        <select id="deliveryMethod" class="w-full px-3 py-2 rounded-lg border border-brand-caramel/30 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand-terracotta"></select>
+                    </div>
+                    <div id="deliveryFields" class="space-y-3 hidden">
+                        <div>
+                            <label for="customerAddress" class="block text-xs font-bold text-brand-cacao uppercase tracking-wider mb-1" data-i18n="fAddress">Dirección de entrega *</label>
+                            <input type="text" id="customerAddress" autocomplete="street-address" maxlength="160" data-i18n-placeholder="fAddressPh" placeholder="Calle, número, apto, barrio y ZIP" class="w-full px-3 py-2 rounded-lg border border-brand-caramel/30 text-sm focus:outline-none focus:ring-2 focus:ring-brand-terracotta">
+                        </div>
+                        <div>
+                            <label for="customerPhone" class="block text-xs font-bold text-brand-cacao uppercase tracking-wider mb-1" data-i18n="fPhone">Teléfono de contacto *</label>
+                            <input type="tel" id="customerPhone" autocomplete="tel" maxlength="25" placeholder="(347) 000-0000" class="w-full px-3 py-2 rounded-lg border border-brand-caramel/30 text-sm focus:outline-none focus:ring-2 focus:ring-brand-terracotta">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <label for="deliveryDate" class="block text-xs font-bold text-brand-cacao uppercase tracking-wider mb-1" data-i18n="fDate">Día</label>
+                            <select id="deliveryDate" class="w-full px-3 py-2 rounded-lg border border-brand-caramel/30 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand-terracotta"></select>
+                        </div>
+                        <div>
+                            <label for="deliveryTime" class="block text-xs font-bold text-brand-cacao uppercase tracking-wider mb-1" data-i18n="fTime">Hora</label>
+                            <select id="deliveryTime" class="w-full px-3 py-2 rounded-lg border border-brand-caramel/30 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand-terracotta"></select>
+                        </div>
+                    </div>
+                    <p id="formError" class="text-sm text-red-700 font-medium hidden" role="alert"></p>
+                </div>
+            </div>
+
+            <div class="p-4 sm:p-6 bg-white border-t border-brand-caramel/20 space-y-3">
+                <div class="space-y-1">
+                    <div id="shippingRow" class="flex justify-between text-sm text-brand-dark/80 hidden">
+                        <span data-i18n="shipping">Envío:</span>
+                        <span data-i18n="shippingTbd">Se confirma por WhatsApp según la zona</span>
+                    </div>
+                    <div class="flex justify-between text-lg font-extrabold text-brand-cacao">
+                        <span id="totalLabel" data-i18n="total">Total:</span>
+                        <span id="cartTotal" class="text-brand-terracotta">$0.00</span>
+                    </div>
+                </div>
+                <button id="checkoutWhatsAppBtn" type="button" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-base disabled:opacity-50 disabled:cursor-not-allowed">
+                    <i data-lucide="message-square" class="w-5 h-5"></i>
+                    <span data-i18n="sendOrder">Enviar pedido por WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="fixed inset-0 z-50 invisible flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
+        <div id="modalBackdrop" class="absolute inset-0 bg-black/60 opacity-0 transition-opacity"></div>
+        <div class="relative bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl scale-95 opacity-0 transition-all duration-200 z-10 flex flex-col max-h-[90vh]" id="modalCard">
+            <div class="relative h-48 bg-brand-cream shrink-0">
+                <img id="modalProductImage" class="w-full h-full object-cover" src="img/favicon.png" alt="">
+                <button id="closeModalBtn" type="button" class="absolute top-3 right-3 bg-white/90 hover:bg-white text-brand-cacao rounded-full p-1.5 shadow-md" data-i18n-aria="close" aria-label="Cerrar">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto space-y-4 custom-scrollbar flex-grow">
+                <div>
+                    <span id="modalCategoryBadge" class="text-[10px] font-bold text-brand-terracotta uppercase tracking-wider bg-brand-terracotta/10 px-2 py-0.5 rounded-full"></span>
+                    <h3 id="modalProductName" class="text-2xl font-extrabold text-brand-cacao mt-1"></h3>
+                    <p id="modalProductDescription" class="text-sm text-brand-dark/80 mt-1"></p>
+                    <p id="modalAllergens" class="text-xs text-brand-dark/75 mt-2 flex items-center gap-1"></p>
+                </div>
+                <div id="modalCustomizationGroups" class="space-y-4 border-t border-brand-caramel/20 pt-4"></div>
+                <div>
+                    <label for="modalNotes" class="block text-xs font-bold text-brand-cacao uppercase tracking-wider mb-1" data-i18n="notes">Notas especiales</label>
+                    <input type="text" id="modalNotes" maxlength="200" data-i18n-placeholder="notesPh" placeholder="Ej. poco dulce, sin servilletas..." class="w-full px-3 py-2 border border-brand-caramel/30 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-terracotta">
+                </div>
+            </div>
+            <div class="p-4 bg-brand-cream/60 border-t border-brand-caramel/20 flex items-center justify-between gap-4">
+                <div class="flex items-center border border-brand-caramel/30 rounded-xl bg-white overflow-hidden">
+                    <button id="modalQtyMinus" type="button" class="px-3 py-2 text-brand-cacao hover:bg-brand-cream font-bold" data-i18n-aria="less" aria-label="Menos">-</button>
+                    <span id="modalQtyVal" class="px-3 py-2 font-bold text-sm" aria-live="polite">1</span>
+                    <button id="modalQtyPlus" type="button" class="px-3 py-2 text-brand-cacao hover:bg-brand-cream font-bold" data-i18n-aria="more" aria-label="Más">+</button>
+                </div>
+                <button id="modalAddToCartBtn" type="button" class="flex-grow bg-brand-terracotta hover:bg-brand-terracotta/90 text-white font-bold py-3 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2">
+                    <span data-i18n="add">Agregar</span>
+                    <span id="modalTotalPrice">$0.00</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+        <button id="closeLightbox" type="button" class="absolute top-4 right-4 text-white p-2" data-i18n-aria="close" aria-label="Cerrar">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <img id="lightboxImg" class="max-w-full max-h-[85vh] rounded-2xl object-contain" src="img/favicon.png" alt="">
+    </div>
+
+    <script>
+    // =====================================================================
+    // CONFIGURACIÓN Y CATÁLOGO
+    // Para cambiar precios, productos o fotos, edita solo este bloque.
+    // =====================================================================
+    const IMG = "img/";
+
+    const ALLERGENS = {
+        milk:   { es: "Lácteos", en: "Dairy" },
+        gluten: { es: "Gluten",  en: "Gluten" },
+        egg:    { es: "Huevo",   en: "Egg" }
+    };
+
+    // Extras comunes para los bowls. ⚠️ Precios de ejemplo: ajústalos a los reales.
+    const BOWL_EXTRAS = {
+        id: "extras", type: "multi",
+        name: { es: "Extras", en: "Extras" },
+        options: [
+            { id: "helado",   name: { es: "Helado extra",        en: "Extra ice cream" },     price: 2.00 },
+            { id: "arequipe", name: { es: "Arequipe extra",      en: "Extra arequipe" },      price: 1.00 },
+            { id: "queso",    name: { es: "Queso rallado extra", en: "Extra grated cheese" }, price: 1.00 }
+        ]
+    };
+
+    const CONFIG = {
+        WHATSAPP_NUMBER: "13476850914",
+        CURRENCY: "$",
+        OPEN_DAYS: [4, 5, 6, 0],       // jueves, viernes, sábado, domingo
+        OPEN_HOUR: 14, CLOSE_HOUR: 22, // 2:00 PM – 10:00 PM
+        SLOT_MINUTES: 30,
+        DELIVERY_METHODS: [
+            { id: "pickup-queens",   es: "Pick-up Queens",      en: "Pick-up Queens",      delivery: false },
+            { id: "pickup-brooklyn", es: "Pick-up Brooklyn",    en: "Pick-up Brooklyn",    delivery: false },
+            { id: "delivery",        es: "Delivery a domicilio (NYC)", en: "Home delivery (NYC)", delivery: true }
+        ],
+        CATEGORIES: [
+            { id: "all",       icon: "layout-grid", name: { es: "Todos los antojos",    en: "All treats" } },
+            { id: "obleas",    icon: "disc",        name: { es: "Obleas y solteritas",  en: "Obleas & solteritas" } },
+            { id: "bowls",     icon: "soup",        name: { es: "Bowls y vasos",        en: "Bowls & cups" } },
+            { id: "tradicion", icon: "heart",       name: { es: "Tradición colombiana", en: "Colombian classics" } }
+        ],
+        // Constructor de obleas. ⚠️ Precios de Mini, Doble y toppings son de ejemplo: ajústalos.
+        BUILDER: {
+            sizes: [
+                { id: "mini",        name: { es: "Mini",        en: "Mini" },        price: 8.00 },
+                { id: "tradicional", name: { es: "Tradicional", en: "Traditional" }, price: 12.00 },
+                { id: "doble",       name: { es: "Doble",       en: "Double" },      price: 18.00 }
+            ],
+            defaultSize: "tradicional",
+            classics: [
+                { id: "arequipe",  name: { es: "Arequipe",            en: "Arequipe (dulce de leche)" } },
+                { id: "mora",      name: { es: "Mermelada de mora",   en: "Blackberry jam" } },
+                { id: "queso",     name: { es: "Queso rallado",       en: "Grated cheese" } },
+                { id: "chantilli", name: { es: "Crema chantillí",     en: "Whipped cream" } }
+            ],
+            extras: [
+                { id: "fresas",     name: { es: "Fresas",            en: "Strawberries" },      price: 2.00 },
+                { id: "durazno",    name: { es: "Durazno",           en: "Peach" },             price: 2.00 },
+                { id: "oreo",       name: { es: "Oreo",              en: "Oreo" },              price: 1.50 },
+                { id: "chocolate",  name: { es: "Chocolate",         en: "Chocolate" },         price: 1.00 },
+                { id: "chocorramo", name: { es: "Chocorramo",        en: "Chocorramo" },        price: 2.00 },
+                { id: "coco",       name: { es: "Coco rallado",      en: "Shredded coconut" },  price: 1.00 },
+                { id: "lechera",    name: { es: "Leche condensada",  en: "Condensed milk" },    price: 1.00 }
+            ]
+        },
+        PRODUCTS: [
+            {
+                id: "oblea-tradicional", categoryId: "obleas", basePrice: 12.00, featured: true,
+                name: { es: "Oblea Tradicional", en: "Traditional Oblea" },
+                desc: { es: "Oblea crujiente rellena con arequipe, mermelada de mora artesanal, queso rallado y crema chantillí. ¿La quieres distinta? Ármala en el constructor.",
+                        en: "Crispy wafer filled with arequipe, homemade blackberry jam, grated cheese and whipped cream. Want it your way? Use the builder." },
+                badge: { es: "Clásico", en: "Classic" },
+                image: "oblea-tradicional.webp", w: 1200, h: 630,
+                allergens: ["milk", "gluten"], customizations: []
+            },
+            {
+                id: "solterita-sencilla", categoryId: "obleas", basePrice: 7.00, featured: false,
+                name: { es: "Solterita Sencilla", en: "Classic Solterita" },
+                desc: { es: "Galleta crujiente de solterita con crema tradicional.", en: "Crunchy solterita cookie with traditional cream." },
+                image: "solterita.webp", w: 677, h: 1200,
+                allergens: ["milk", "gluten"], customizations: []
+            },
+            {
+                id: "solterita-especial", categoryId: "obleas", basePrice: 9.00, featured: true,
+                name: { es: "Solterita Especial", en: "Special Solterita" },
+                desc: { es: "Con queso, chantillí y mermelada de mora.", en: "With cheese, whipped cream and blackberry jam." },
+                badge: { es: "Recomendado", en: "Recommended" },
+                image: "solterita.webp", w: 677, h: 1200,
+                allergens: ["milk", "gluten"], customizations: []
+            },
+            {
+                id: "obleyork-bowl", categoryId: "bowls", basePrice: 16.00, featured: true,
+                name: { es: "Obleyork", en: "Obleyork Bowl" },
+                desc: { es: "El bowl insignia con duraznos, fresas, arequipe, queso y mermelada de mora.",
+                        en: "Our signature bowl with peaches, strawberries, arequipe, cheese and blackberry jam." },
+                badge: { es: "Insignia", en: "Signature" },
+                image: "obleyork.webp", w: 679, h: 1200,
+                allergens: ["milk"], customizations: [BOWL_EXTRAS]
+            },
+            {
+                id: "fresas-con-crema", categoryId: "bowls", basePrice: 14.00, featured: true,
+                name: { es: "Fresas con Crema", en: "Strawberries & Cream" },
+                desc: { es: "Fresas frescas con crema chantillí y queso rallado.", en: "Fresh strawberries with whipped cream and grated cheese." },
+                badge: { es: "Popular", en: "Popular" },
+                image: "fresas-crema.webp", w: 677, h: 1200,
+                allergens: ["milk"], customizations: [BOWL_EXTRAS]
+            },
+            {
+                id: "fresas-oreo", categoryId: "bowls", basePrice: 14.00, featured: false,
+                name: { es: "Fresas Oreo", en: "Strawberries Oreo" },
+                desc: { es: "Fresas con helado, galleta Oreo triturada y chispas de chocolate.", en: "Strawberries with ice cream, crushed Oreo and chocolate chips." },
+                image: "fresas-oreo.webp", w: 900, h: 1199,
+                allergens: ["milk", "gluten"], customizations: [BOWL_EXTRAS]
+            },
+            {
+                id: "fresa-brownie", categoryId: "bowls", basePrice: 14.00, featured: true,
+                name: { es: "Fresa Brownie", en: "Strawberry Brownie" },
+                desc: { es: "Fresas con crema chantillí, trozos de brownie de chocolate y Chocorramo.", en: "Strawberries with whipped cream, chocolate brownie chunks and Chocorramo cake." },
+                badge: { es: "Favorito", en: "Favorite" },
+                image: "fresas-oreo.webp", w: 900, h: 1199,
+                allergens: ["milk", "gluten", "egg"], customizations: [BOWL_EXTRAS]
+            },
+            {
+                id: "ensalada-frutas", categoryId: "bowls", basePrice: 15.00, featured: false,
+                name: { es: "Ensalada de Frutas", en: "Fruit Salad" },
+                desc: { es: "Frutas frescas picadas con crema, queso rallado, helado y salsa de mora.",
+                        en: "Fresh chopped fruit with cream, grated cheese, ice cream and blackberry sauce." },
+                image: "ensalada-fruta-regular.webp", w: 675, h: 1200,
+                sizeImages: { regular: "ensalada-fruta-regular.webp", grande: "ensalada-fruta-grande.webp" },
+                allergens: ["milk"],
+                customizations: [{
+                    id: "tamano", type: "single", required: true,
+                    name: { es: "Tamaño", en: "Size" },
+                    options: [
+                        { id: "regular", name: { es: "Regular", en: "Regular" }, price: 0 },
+                        { id: "grande",  name: { es: "Grande",  en: "Large" },   price: 2.00 }
+                    ]
+                }, BOWL_EXTRAS]
+            },
+            {
+                id: "casado", categoryId: "bowls", basePrice: 14.00, featured: false,
+                name: { es: "Casado", en: "Casado" },
+                desc: { es: "Helado con bocadillo, queso, trozos de fruta y oblea crujiente.", en: "Ice cream with guava paste, cheese, fruit and a crispy wafer." },
+                image: "casado.webp", w: 675, h: 1200,
+                allergens: ["milk", "gluten"], customizations: [BOWL_EXTRAS]
+            },
+            {
+                id: "mazamorra", categoryId: "tradicion", basePrice: 12.00, featured: false,
+                name: { es: "Mazamorra", en: "Mazamorra" },
+                desc: { es: "Mazamorra colombiana servida con borde michelado y acompañada de bocadillo o panelita de coco.",
+                        en: "Colombian corn & milk drink with a sugared rim, served with guava paste or a coconut panelita." },
+                badge: { es: "Tradicional", en: "Traditional" },
+                image: "mazamorra.webp", w: 676, h: 1200,
+                allergens: ["milk"],
+                customizations: [{
+                    id: "acompanante", type: "single", required: true,
+                    name: { es: "Acompañante", en: "Side" },
+                    options: [
+                        { id: "bocadillo", name: { es: "Bocadillo", en: "Guava paste (bocadillo)" }, price: 0 },
+                        { id: "panelita",  name: { es: "Panelita de coco", en: "Coconut panelita" },  price: 0 }
+                    ]
+                }]
+            }
+        ],
+        GALLERY: [
+            { src: "obleyork.webp",               alt: { es: "Bowl Obleyork con fruta y arequipe", en: "Obleyork bowl with fruit and arequipe" } },
+            { src: "fresas-oreo.webp",            alt: { es: "Fresas con brownie y Chocorramo", en: "Strawberries with brownie and Chocorramo" } },
+            { src: "ensalada-fruta-grande.webp",  alt: { es: "Ensalada de frutas grande con helado y oblea", en: "Large fruit salad with ice cream and wafer" } },
+            { src: "solterita.webp",              alt: { es: "Solteritas con arequipe y mora", en: "Solteritas with arequipe and blackberry" } },
+            { src: "ensalada-fruta-regular.webp", alt: { es: "Ensalada de frutas regular", en: "Regular fruit salad" } },
+            { src: "mazamorra.webp",              alt: { es: "Mazamorra con bocadillo", en: "Mazamorra with guava paste" } },
+            { src: "fresas-crema.webp",           alt: { es: "Fresas con crema y queso", en: "Strawberries with cream and cheese" } },
+            { src: "casado.webp",                 alt: { es: "Casado con oblea y arequipe", en: "Casado with wafer and arequipe" } }
+        ],
+        // ⚠️ Usa solo reseñas reales de clientes (con su permiso).
+        REVIEWS: [
+            { name: "Camilo A.", rating: 5, comment: "Las obleas igualitas a las de Zipaquirá. El queso fresco y el arequipe delicioso. ¡Recomendadísimo!" },
+            { name: "Sonia M.",  rating: 5, comment: "Pedí para un evento en Queens y llegaron crujientes y empacadas perfecto. Súper atentas por WhatsApp." },
+            { name: "John D.",   rating: 5, comment: "Amazing Colombian dessert experience in New York. The Oblea Bowl is huge!" }
+        ]
+    };
+
+    // =====================================================================
+    // TEXTOS (ES / EN)
+    // =====================================================================
+    const I18N = {
+        es: {
+            skip: "Saltar al menú",
+            announce: "Envíos en Nueva York y pick-up en Queens / Brooklyn", announceCta: "¡Haz tu pedido directo a WhatsApp!",
+            navMenu: "Menú", navBuilder: "Arma tu oblea", navGallery: "Galería", navReviews: "Reseñas", navHow: "¿Cómo pedir?",
+            openCart: "Abrir carrito", cartBtn: "Tu antojo", openMenu: "Abrir menú", closeMenu: "Cerrar menú",
+            heroBadge: "Tradición colombiana auténtica",
+            heroTitle: 'Un pedacito de <span class="text-brand-terracotta underline decoration-brand-caramel decoration-wavy decoration-2">Colombia</span> en cada bocado',
+            heroText: "Obleas crujientes, solteritas, mazamorra y bowls especiales, preparados frescos en Nueva York.",
+            heroCta1: "Ver el menú", heroCta2: "Arma tu antojo", heroFav: "Favorita del mes",
+            featuredKicker: "Favoritos de la casa", featuredTitle: "Los más pedidos",
+            categories: "Categorías", categoriesHint: "Selecciona para filtrar",
+            catalogTitle: "Catálogo completo", catalogText: "Antojitos preparados al instante con insumos colombianos",
+            searchPh: "Buscar obleas, solteritas, bowls...", noResults: "No encontramos antojos con ese criterio.",
+            customize: "Personalizar", add: "Agregar",
+            builderKicker: "Hazla a tu gusto", builderTitle: "Constructor de antojos",
+            builderText: "Elige el tamaño, quita o deja los clásicos y súmale toppings. El precio se calcula al instante.",
+            builderStep1: "1. Tamaño de la oblea *", builderStep2: "2. Clásicos incluidos", builderStep3: "3. Toppings extra (opcionales)",
+            builderNotes: "Indicaciones especiales", builderNotesPh: "Ej. doble queso, mermelada aparte...",
+            builderSummary: "Resumen de tu creación", builderAdd: "Agregar oblea al carrito",
+            builderName: "Oblea armada", size: "Tamaño", classics: "Clásicos", noClassics: "Sin clásicos", extras: "Extras", included: "Incluido",
+            total: "Total:", subtotal: "Subtotal:",
+            galleryTitle: "Sabor que entra por los ojos", galleryText: "Nuestras preparaciones artesanales, recién hechas",
+            reviewsKicker: "Opiniones", reviewsTitle: "Lo que dicen nuestros clientes", reviewsMore: "Mira más en nuestro Instagram",
+            howTitle: "¿Cómo funciona tu pedido?",
+            how1t: "Selecciona", how1: "Escoge tus productos o arma tu oblea a tu gusto.",
+            how2t: "Revisa tu carrito", how2: "Verifica cantidades, elige pick-up o delivery y el día y la hora.",
+            how3t: "Envía a WhatsApp", how3: "Generamos el mensaje listo y te confirmamos disponibilidad.",
+            footerAbout: "\"Un pedacito de Colombia en cada bocado\". Llevamos la tradición y la dulzura colombiana a Nueva York.",
+            call: "Llamar al +1 (347) 685-0914",
+            footerHoursT: "Horario y atención", footerHours: "Jueves a domingo: 2:00 PM – 10:00 PM",
+            footerPickup: "Pick-up en zonas designadas de Queens / Brooklyn", footerConfirm: "* Confirmamos cada pedido por WhatsApp.",
+            footerLegalT: "Aviso legal y alérgenos",
+            footerLegal: "Los precios están en USD. Enviar el pedido por WhatsApp no genera ningún cobro; la confirmación final y el método de pago se acuerdan directamente con nosotros.",
+            footerAllergens: "Alérgenos: nuestros productos contienen lácteos y muchos contienen gluten. Si tienes alguna alergia, avísanos en las notas del pedido.",
+            rights: "Todos los derechos reservados.",
+            waFloat: "Escríbenos por WhatsApp", viewCart: "Ver carrito", added: "Agregado al carrito",
+            cartTitle: "Tu pedido", close: "Cerrar", less: "Menos", more: "Más", remove: "Eliminar",
+            cartEmpty: "Tu carrito está vacío", cartEmptyText: "¡Explora nuestro catálogo y date un antojo colombiano!",
+            each: "c/u", note: "Nota",
+            fName: "Tu nombre *", fMethod: "Método *", fAddress: "Dirección de entrega *", fAddressPh: "Calle, número, apto, barrio y ZIP",
+            fPhone: "Teléfono de contacto *", fDate: "Día", fTime: "Hora",
+            asap: "Lo antes posible", toConfirm: "Por confirmar",
+            shipping: "Envío:", shippingTbd: "Se confirma por WhatsApp según la zona",
+            sendOrder: "Enviar pedido por WhatsApp",
+            errEmpty: "Tu carrito está vacío. Agrega productos antes de hacer tu pedido.",
+            errName: "Escribe tu nombre para el pedido.", errAddress: "Escribe la dirección de entrega.", errPhone: "Escribe un teléfono de contacto válido.",
+            confirmClear: "¿Ya enviaste el pedido por WhatsApp? Pulsa Aceptar para vaciar el carrito.",
+            notes: "Notas especiales", notesPh: "Ej. poco dulce, sin servilletas...",
+            noOptions: "Este producto no necesita configuración adicional.", contains: "Contiene:", free: "Sin costo",
+            today: "Hoy"
+        },
+        en: {
+            skip: "Skip to menu",
+            announce: "Delivery in New York and pick-up in Queens / Brooklyn", announceCta: "Order straight through WhatsApp!",
+            navMenu: "Menu", navBuilder: "Build your oblea", navGallery: "Gallery", navReviews: "Reviews", navHow: "How to order",
+            openCart: "Open cart", cartBtn: "Your order", openMenu: "Open menu", closeMenu: "Close menu",
+            heroBadge: "Authentic Colombian tradition",
+            heroTitle: 'A little piece of <span class="text-brand-terracotta underline decoration-brand-caramel decoration-wavy decoration-2">Colombia</span> in every bite',
+            heroText: "Crispy obleas, solteritas, mazamorra and special bowls, made fresh in New York.",
+            heroCta1: "See the menu", heroCta2: "Build your treat", heroFav: "Favorite of the month",
+            featuredKicker: "House favorites", featuredTitle: "Most ordered",
+            categories: "Categories", categoriesHint: "Tap to filter",
+            catalogTitle: "Full menu", catalogText: "Treats made to order with Colombian ingredients",
+            searchPh: "Search obleas, solteritas, bowls...", noResults: "No treats match your search.",
+            customize: "Customize", add: "Add",
+            builderKicker: "Make it yours", builderTitle: "Treat builder",
+            builderText: "Pick a size, keep or remove the classics and add toppings. The price updates instantly.",
+            builderStep1: "1. Oblea size *", builderStep2: "2. Included classics", builderStep3: "3. Extra toppings (optional)",
+            builderNotes: "Special instructions", builderNotesPh: "E.g. double cheese, jam on the side...",
+            builderSummary: "Your creation", builderAdd: "Add oblea to cart",
+            builderName: "Custom oblea", size: "Size", classics: "Classics", noClassics: "No classics", extras: "Extras", included: "Included",
+            total: "Total:", subtotal: "Subtotal:",
+            galleryTitle: "A feast for the eyes", galleryText: "Our handmade treats, freshly prepared",
+            reviewsKicker: "Reviews", reviewsTitle: "What our customers say", reviewsMore: "See more on our Instagram",
+            howTitle: "How does ordering work?",
+            how1t: "Choose", how1: "Pick your treats or build your own oblea.",
+            how2t: "Check your cart", how2: "Review quantities, choose pick-up or delivery, and pick a day and time.",
+            how3t: "Send via WhatsApp", how3: "We prepare the message for you and confirm availability.",
+            footerAbout: "\"A little piece of Colombia in every bite\". Bringing Colombian tradition and sweetness to New York.",
+            call: "Call +1 (347) 685-0914",
+            footerHoursT: "Hours", footerHours: "Thursday to Sunday: 2:00 PM – 10:00 PM",
+            footerPickup: "Pick-up at designated spots in Queens / Brooklyn", footerConfirm: "* Every order is confirmed via WhatsApp.",
+            footerLegalT: "Legal & allergens",
+            footerLegal: "Prices are in USD. Sending your order via WhatsApp does not charge you; final confirmation and payment method are agreed directly with us.",
+            footerAllergens: "Allergens: our products contain dairy and many contain gluten. If you have any allergy, let us know in the order notes.",
+            rights: "All rights reserved.",
+            waFloat: "Message us on WhatsApp", viewCart: "View cart", added: "Added to cart",
+            cartTitle: "Your order", close: "Close", less: "Less", more: "More", remove: "Remove",
+            cartEmpty: "Your cart is empty", cartEmptyText: "Browse our menu and treat yourself to something Colombian!",
+            each: "each", note: "Note",
+            fName: "Your name *", fMethod: "Method *", fAddress: "Delivery address *", fAddressPh: "Street, number, apt, neighborhood and ZIP",
+            fPhone: "Contact phone *", fDate: "Day", fTime: "Time",
+            asap: "As soon as possible", toConfirm: "To be confirmed",
+            shipping: "Delivery fee:", shippingTbd: "Confirmed via WhatsApp based on your area",
+            sendOrder: "Send order via WhatsApp",
+            errEmpty: "Your cart is empty. Add some treats before ordering.",
+            errName: "Please enter your name.", errAddress: "Please enter the delivery address.", errPhone: "Please enter a valid contact phone.",
+            confirmClear: "Did you send the order on WhatsApp? Press OK to empty your cart.",
+            notes: "Special notes", notesPh: "E.g. less sweet, no napkins...",
+            noOptions: "This item needs no extra options.", contains: "Contains:", free: "Free",
+            today: "Today"
+        }
+    };
+
+    // =====================================================================
+    // ESTADO
+    // =====================================================================
+    const CART_KEY = "obleyork_cart_v2";
+    const LANG_KEY = "obleyork_lang";
+    let lang = (localStorage.getItem(LANG_KEY) === "en") ? "en" : "es";
+    let activeCategory = "all";
+    let cart = loadCart();
+    let activeModalProduct = null;
+    let activeModalQty = 1;
+    let selectedModalOptions = {};
+    let toastTimer = null;
+
+    // =====================================================================
+    // UTILIDADES
+    // =====================================================================
+    const $ = (id) => document.getElementById(id);
+    const t = (key) => (I18N[lang] && I18N[lang][key]) ?? I18N.es[key] ?? key;
+    const L = (obj, l = lang) => (obj && typeof obj === "object") ? (obj[l] ?? obj.es) : (obj ?? "");
+    const money = (n) => `${CONFIG.CURRENCY}${n.toFixed(2)}`;
+    const findProduct = (id) => CONFIG.PRODUCTS.find(p => p.id === id);
+
+    function escapeHTML(str) {
+        return String(str ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    }
+
+    function refreshIcons() {
+        if (window.lucide) window.lucide.createIcons();
+    }
+
+    function trackEvent(name, props) {
+        try {
+            if (typeof window.plausible === "function") window.plausible(name, { props });
+            if (typeof window.gtag === "function") window.gtag("event", name, props);
+        } catch (e) { /* la medición nunca debe romper la página */ }
+    }
+
+    function loadCart() {
+        try {
+            const raw = JSON.parse(localStorage.getItem(CART_KEY));
+            if (!Array.isArray(raw)) return [];
+            return raw.filter(isValidCartItem);
+        } catch (e) {
+            localStorage.removeItem(CART_KEY);
+            return [];
+        }
+    }
+
+    function isValidCartItem(item) {
+        if (!item || typeof item !== "object") return false;
+        if (!Number.isInteger(item.qty) || item.qty < 1 || item.qty > 99) return false;
+        if (typeof item.notes !== "string") item.notes = "";
+        item.notes = item.notes.slice(0, 200);
+        if (item.kind === "product") return !!findProduct(item.productId) && item.options && typeof item.options === "object";
+        if (item.kind === "builder") return CONFIG.BUILDER.sizes.some(s => s.id === item.size) && Array.isArray(item.classics) && Array.isArray(item.extras);
+        return false;
+    }
+
+    function saveCart() {
+        try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch (e) { /* almacenamiento lleno o bloqueado */ }
+    }
+
+    // Calcula nombre, precio unitario y detalles de una línea del carrito
+    // a partir del catálogo (los precios nunca se leen de localStorage).
+    function describeLine(item, l = lang) {
+        const tl = (k) => I18N[l][k];
+        if (item.kind === "builder") {
+            const B = CONFIG.BUILDER;
+            const size = B.sizes.find(s => s.id === item.size);
+            const classics = B.classics.filter(c => item.classics.includes(c.id));
+            const extras = B.extras.filter(e => item.extras.includes(e.id));
+            const unit = size.price + extras.reduce((a, e) => a + e.price, 0);
+            const details = [
+                `${tl("classics")}: ${classics.length ? classics.map(c => L(c.name, l)).join(", ") : tl("noClassics")}`
+            ];
+            if (extras.length) details.push(`${tl("extras")}: ${extras.map(e => `${L(e.name, l)} (+${money(e.price)})`).join(", ")}`);
+            return { name: `${tl("builderName")} – ${L(size.name, l)}`, unit, details };
+        }
+        const p = findProduct(item.productId);
+        let unit = p.basePrice;
+        const details = [];
+        p.customizations.forEach(g => {
+            const ids = item.options[g.id] || [];
+            g.options.filter(o => ids.includes(o.id)).forEach(o => {
+                unit += o.price;
+                details.push(`${L(g.name, l)}: ${L(o.name, l)}${o.price > 0 ? ` (+${money(o.price)})` : ""}`);
+            });
+        });
+        return { name: L(p.name, l), unit, details };
+    }
+
+    // =====================================================================
+    // IDIOMA
+    // =====================================================================
+    function applyLanguage() {
+        document.documentElement.lang = lang;
+        document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
+        document.querySelectorAll("[data-i18n-html]").forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); });
+        document.querySelectorAll("[data-i18n-placeholder]").forEach(el => { el.placeholder = t(el.dataset.i18nPlaceholder); });
+        document.querySelectorAll("[data-i18n-aria]").forEach(el => { el.setAttribute("aria-label", t(el.dataset.i18nAria)); });
+        $("langBtn").textContent = lang === "es" ? "EN" : "ES";
+
+        renderCategories();
+        renderFeatured();
+        renderProducts();
+        renderGallery();
+        renderReviews();
+        renderBuilderOptions();
+        renderDeliveryMethods();
+        renderDateOptions();
+        updateCartUI();
+        if (activeModalProduct && !$("productModal").classList.contains("invisible")) renderModalContent(true);
+        refreshIcons();
+    }
+
+    function toggleLanguage() {
+        lang = lang === "es" ? "en" : "es";
+        localStorage.setItem(LANG_KEY, lang);
+        applyLanguage();
+    }
+
+    // =====================================================================
+    // INICIO
+    // =====================================================================
+    document.addEventListener("DOMContentLoaded", () => {
+        $("year").textContent = new Date().getFullYear();
+        applyLanguage();
+
+        $("langBtn").addEventListener("click", toggleLanguage);
+        $("searchInput").addEventListener("input", renderProducts);
+        $("cartBtn").addEventListener("click", openCart);
+        $("closeCartBtn").addEventListener("click", closeCart);
+        $("cartBackdrop").addEventListener("click", closeCart);
+        $("closeModalBtn").addEventListener("click", closeModal);
+        $("modalBackdrop").addEventListener("click", closeModal);
+        $("checkoutWhatsAppBtn").addEventListener("click", handleCheckoutWhatsApp);
+        $("addBuilderToCartBtn").addEventListener("click", handleAddBuilderToCart);
+        $("closeLightbox").addEventListener("click", closeLightbox);
+        $("lightboxModal").addEventListener("click", (e) => { if (e.target.id === "lightboxModal") closeLightbox(); });
+        $("toastViewCart").addEventListener("click", () => { hideToast(); openCart(); });
+        $("deliveryMethod").addEventListener("change", updateDeliveryFields);
+        $("deliveryDate").addEventListener("change", renderTimeOptions);
+
+        // Menú móvil
+        $("menuBtn").addEventListener("click", () => toggleMobileMenu());
+        document.querySelectorAll("#mobileMenu a").forEach(a => a.addEventListener("click", () => toggleMobileMenu(false)));
+
+        // Cantidad en modal
+        $("modalQtyMinus").addEventListener("click", () => { if (activeModalQty > 1) { activeModalQty--; updateModalPrice(); } });
+        $("modalQtyPlus").addEventListener("click", () => { if (activeModalQty < 99) { activeModalQty++; updateModalPrice(); } });
+        $("modalAddToCartBtn").addEventListener("click", handleModalAddToCart);
+
+        // Delegación de eventos para contenido dinámico
+        document.body.addEventListener("click", (e) => {
+            const el = e.target.closest("[data-action]");
+            if (!el) return;
+            const { action, id, idx } = el.dataset;
+            if (action === "category") setCategory(id);
+            else if (action === "open-product") openProductModal(id);
+            else if (action === "qty-minus") changeCartQty(Number(idx), -1);
+            else if (action === "qty-plus") changeCartQty(Number(idx), 1);
+            else if (action === "remove") removeCartItem(Number(idx));
+            else if (action === "lightbox") openLightbox(el.dataset.src, el.dataset.alt);
+        });
+        document.body.addEventListener("change", (e) => {
+            if (e.target.matches("[data-builder]")) updateBuilderPrice();
+            if (e.target.matches("[data-group]")) handleModalOptionChange(e.target.dataset.group, e.target.dataset.type);
+        });
+
+        // Escape cierra lo que esté abierto
+        document.addEventListener("keydown", (e) => {
+            if (e.key !== "Escape") return;
+            if (!$("lightboxModal").classList.contains("hidden")) closeLightbox();
+            else if (!$("productModal").classList.contains("invisible")) closeModal();
+            else if (!$("cartDrawer").classList.contains("invisible")) closeCart();
+            else toggleMobileMenu(false);
+        });
+    });
+
+    function toggleMobileMenu(force) {
+        const menu = $("mobileMenu");
+        const open = force ?? menu.classList.contains("hidden");
+        menu.classList.toggle("hidden", !open);
+        $("menuBtn").setAttribute("aria-expanded", String(open));
+        $("menuBtn").setAttribute("aria-label", t(open ? "closeMenu" : "openMenu"));
+        $("menuBtn").innerHTML = `<i data-lucide="${open ? "x" : "menu"}" class="w-6 h-6"></i>`;
+        refreshIcons();
+    }
+
+    // =====================================================================
+    // CATÁLOGO
+    // =====================================================================
+    function renderCategories() {
+        $("categoryContainer").innerHTML = CONFIG.CATEGORIES.map(cat => `
+            <button type="button" data-action="category" data-id="${cat.id}" aria-pressed="${activeCategory === cat.id}"
+                class="flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-bold whitespace-nowrap transition-all ${
+                    activeCategory === cat.id
+                        ? "bg-brand-cacao text-white shadow-md"
+                        : "bg-brand-cream text-brand-cacao hover:bg-brand-caramel/20 border border-brand-caramel/20"
+                }">
+                <i data-lucide="${cat.icon}" class="w-4 h-4"></i>
+                ${escapeHTML(L(cat.name))}
+            </button>
+        `).join("");
+        refreshIcons();
+    }
+
+    function setCategory(id) {
+        activeCategory = id;
+        renderCategories();
+        renderProducts();
+    }
+
+    function renderFeatured() {
+        $("featuredGrid").innerHTML = CONFIG.PRODUCTS.filter(p => p.featured).map(p => `
+            <button type="button" data-action="open-product" data-id="${p.id}" class="snap-start shrink-0 w-44 sm:w-52 text-left bg-white/95 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-brand-caramel/20 group">
+                <div class="h-40 overflow-hidden bg-brand-cream">
+                    <img src="${IMG + p.image}" alt="${escapeHTML(L(p.name))}" width="${p.w}" height="${p.h}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-3">
+                    <p class="font-title font-bold text-brand-cacao leading-tight">${escapeHTML(L(p.name))}</p>
+                    <p class="font-title font-extrabold text-brand-terracotta">${money(p.basePrice)}</p>
+                </div>
+            </button>
+        `).join("");
+    }
+
+    function renderProducts() {
+        const grid = $("productGrid");
+        const term = $("searchInput").value.trim().toLowerCase();
+
+        const filtered = CONFIG.PRODUCTS.filter(p => {
+            const inCat = activeCategory === "all" || p.categoryId === activeCategory;
+            const haystack = [p.name.es, p.name.en, p.desc.es, p.desc.en].join(" ").toLowerCase();
+            return inCat && (!term || haystack.includes(term));
+        });
+
+        if (filtered.length === 0) {
+            grid.innerHTML = `
+                <div class="col-span-full py-12 text-center text-brand-dark/75 space-y-3">
+                    <i data-lucide="search-x" class="w-12 h-12 mx-auto"></i>
+                    <p class="font-bold">${escapeHTML(t("noResults"))}</p>
+                </div>`;
+            refreshIcons();
+            return;
+        }
+
+        grid.innerHTML = filtered.map(p => {
+            const hasOpts = p.customizations.length > 0;
+            return `
+            <article class="bg-white/95 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-brand-caramel/20 flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-56 overflow-hidden bg-brand-cream">
+                        <img src="${IMG + p.image}" alt="${escapeHTML(L(p.name))}" width="${p.w}" height="${p.h}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        ${p.badge ? `<span class="absolute top-3 left-3 bg-brand-terracotta text-white font-bold text-[10px] uppercase px-2.5 py-1 rounded-full shadow">${escapeHTML(L(p.badge))}</span>` : ""}
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-title font-bold text-xl text-brand-cacao">${escapeHTML(L(p.name))}</h3>
+                        <p class="text-sm text-brand-dark/80 mt-1 line-clamp-3">${escapeHTML(L(p.desc))}</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-3 flex items-center justify-between border-t border-brand-caramel/10">
+                    <span class="font-title font-extrabold text-xl text-brand-terracotta">${money(p.basePrice)}</span>
+                    <button type="button" data-action="open-product" data-id="${p.id}" class="bg-brand-cream hover:bg-brand-caramel/20 text-brand-cacao font-bold py-2 px-4 rounded-xl text-sm transition-colors flex items-center gap-1.5 border border-brand-caramel/30">
+                        <i data-lucide="${hasOpts ? "sliders-horizontal" : "plus"}" class="w-4 h-4"></i>
+                        ${escapeHTML(t(hasOpts ? "customize" : "add"))}
+                    </button>
+                </div>
+            </article>`;
+        }).join("");
+        refreshIcons();
+    }
+
+    // =====================================================================
+    // CONSTRUCTOR
+    // =====================================================================
+    function renderBuilderOptions() {
+        const B = CONFIG.BUILDER;
+        // Conserva la selección actual al cambiar de idioma
+        const prevSize = document.querySelector('input[name="builderSize"]:checked')?.value || B.defaultSize;
+        const prevClassics = $("builderClassicOptions").children.length
+            ? [...document.querySelectorAll('input[data-builder="classic"]:checked')].map(i => i.value)
+            : B.classics.map(c => c.id);
+        const prevExtras = [...document.querySelectorAll('input[data-builder="extra"]:checked')].map(i => i.value);
+
+        const cardCls = "border border-brand-caramel/30 p-3 rounded-xl flex flex-col justify-between cursor-pointer hover:border-brand-terracotta transition-all has-[:checked]:bg-brand-caramel/10 has-[:checked]:border-brand-terracotta bg-white/80";
+
+        $("builderSizeOptions").innerHTML = B.sizes.map(s => `
+            <label class="${cardCls}">
+                <span class="flex justify-between items-start gap-2">
+                    <span class="font-bold text-sm text-brand-cacao">${escapeHTML(L(s.name))}</span>
+                    <input type="radio" name="builderSize" value="${s.id}" data-builder="size" ${s.id === prevSize ? "checked" : ""} class="accent-brand-terracotta">
+                </span>
+                <span class="text-sm font-bold text-brand-terracotta mt-2">${money(s.price)}</span>
+            </label>`).join("");
+
+        $("builderClassicOptions").innerHTML = B.classics.map(c => `
+            <label class="${cardCls}">
+                <span class="flex justify-between items-start gap-2">
+                    <span class="font-medium text-xs text-brand-cacao">${escapeHTML(L(c.name))}</span>
+                    <input type="checkbox" value="${c.id}" data-builder="classic" ${prevClassics.includes(c.id) ? "checked" : ""} class="accent-brand-terracotta">
+                </span>
+                <span class="text-[11px] text-brand-dark/75 mt-1">${escapeHTML(t("included"))}</span>
+            </label>`).join("");
+
+        $("builderExtraOptions").innerHTML = B.extras.map(x => `
+            <label class="${cardCls}">
+                <span class="flex justify-between items-start gap-2">
+                    <span class="font-medium text-xs text-brand-cacao">${escapeHTML(L(x.name))}</span>
+                    <input type="checkbox" value="${x.id}" data-builder="extra" ${prevExtras.includes(x.id) ? "checked" : ""} class="accent-brand-terracotta">
+                </span>
+                <span class="text-[11px] font-bold text-brand-terracotta mt-1">+${money(x.price)}</span>
+            </label>`).join("");
+
+        updateBuilderPrice();
+    }
+
+    function readBuilder() {
+        return {
+            kind: "builder",
+            size: document.querySelector('input[name="builderSize"]:checked')?.value || CONFIG.BUILDER.defaultSize,
+            classics: [...document.querySelectorAll('input[data-builder="classic"]:checked')].map(i => i.value),
+            extras: [...document.querySelectorAll('input[data-builder="extra"]:checked')].map(i => i.value)
+        };
+    }
+
+    function updateBuilderPrice() {
+        const b = readBuilder();
+        const d = describeLine({ ...b, qty: 1, notes: "" });
+        const size = CONFIG.BUILDER.sizes.find(s => s.id === b.size);
+        $("builderSummaryContent").innerHTML = `
+            <div class="flex justify-between"><span>${escapeHTML(t("size"))}: ${escapeHTML(L(size.name))}</span><span class="font-bold">${money(size.price)}</span></div>
+            ${d.details.map(x => `<div class="text-xs">• ${escapeHTML(x)}</div>`).join("")}`;
+        $("builderTotalPrice").textContent = money(d.unit);
+    }
+
+    function handleAddBuilderToCart() {
+        const item = { ...readBuilder(), lineId: "b_" + Date.now(), qty: 1, notes: $("builderNotes").value.trim().slice(0, 200) };
+        cart.push(item);
+        saveCart();
+        updateCartUI();
+        $("builderNotes").value = "";
+        showToast(describeLine(item).name);
+        trackEvent("add_to_cart", { product: "builder-" + item.size });
+    }
+
+    // =====================================================================
+    // MODAL DE PRODUCTO
+    // =====================================================================
+    function openProductModal(productId) {
+        activeModalProduct = findProduct(productId);
+        if (!activeModalProduct) return;
+        activeModalQty = 1;
+        selectedModalOptions = {};
+        $("modalNotes").value = "";
+        renderModalContent(false);
+
+        const modal = $("productModal");
+        modal.classList.remove("invisible");
+        setTimeout(() => {
+            $("modalBackdrop").classList.remove("opacity-0");
+            $("modalCard").classList.remove("scale-95", "opacity-0");
+            $("closeModalBtn").focus();
+        }, 10);
+    }
+
+    function renderModalContent(keepSelection) {
+        const p = activeModalProduct;
+        const cat = CONFIG.CATEGORIES.find(c => c.id === p.categoryId);
+        $("modalProductName").textContent = L(p.name);
+        $("modalProductDescription").textContent = L(p.desc);
+        $("modalProductImage").src = IMG + p.image;
+        $("modalProductImage").alt = L(p.name);
+        $("modalCategoryBadge").textContent = cat ? L(cat.name) : "";
+        $("modalAllergens").innerHTML = p.allergens?.length
+            ? `<i data-lucide="info" class="w-3.5 h-3.5"></i> ${escapeHTML(t("contains"))} ${escapeHTML(p.allergens.map(a => L(ALLERGENS[a])).join(", "))}`
+            : "";
+
+        const groups = $("modalCustomizationGroups");
+        if (p.customizations.length === 0) {
+            groups.innerHTML = `<p class="text-sm text-brand-dark/75 italic">${escapeHTML(t("noOptions"))}</p>`;
+        } else {
+            groups.innerHTML = p.customizations.map(g => `
+                <fieldset>
+                    <legend class="block font-bold text-xs uppercase tracking-wider text-brand-cacao mb-2">${escapeHTML(L(g.name))} ${g.required ? "*" : ""}</legend>
+                    <div class="space-y-2">
+                        ${g.options.map((o, i) => {
+                            const sel = keepSelection ? (selectedModalOptions[g.id] || []).includes(o.id) : (g.type === "single" && i === 0);
+                            return `
+                            <label class="flex items-center justify-between p-2.5 border border-brand-caramel/20 rounded-xl cursor-pointer hover:bg-brand-cream/50 text-sm has-[:checked]:border-brand-terracotta has-[:checked]:bg-brand-caramel/10">
+                                <span class="flex items-center gap-2">
+                                    <input type="${g.type === "single" ? "radio" : "checkbox"}" name="group_${g.id}" value="${o.id}"
+                                        data-group="${g.id}" data-type="${g.type}" ${sel ? "checked" : ""} class="accent-brand-terracotta">
+                                    <span class="font-medium text-brand-dark">${escapeHTML(L(o.name))}</span>
+                                </span>
+                                <span class="text-brand-terracotta font-bold">${o.price > 0 ? "+" + money(o.price) : escapeHTML(t("free"))}</span>
+                            </label>`;
+                        }).join("")}
+                    </div>
+                </fieldset>`).join("");
+            p.customizations.forEach(g => handleModalOptionChange(g.id, g.type));
+        }
+        updateModalPrice();
+        refreshIcons();
+    }
+
+    function handleModalOptionChange(groupId, type) {
+        const sel = type === "single"
+            ? [document.querySelector(`input[name="group_${groupId}"]:checked`)?.value].filter(Boolean)
+            : [...document.querySelectorAll(`input[name="group_${groupId}"]:checked`)].map(c => c.value);
+        selectedModalOptions[groupId] = sel;
+        const p = activeModalProduct;
+        if (p && p.sizeImages && p.sizeImages[sel[0]]) $("modalProductImage").src = IMG + p.sizeImages[sel[0]];
+        updateModalPrice();
+    }
+
+    function updateModalPrice() {
+        if (!activeModalProduct) return;
+        const { unit } = describeLine({ kind: "product", productId: activeModalProduct.id, options: selectedModalOptions, qty: 1, notes: "" });
+        $("modalQtyVal").textContent = activeModalQty;
+        $("modalTotalPrice").textContent = money(unit * activeModalQty);
+    }
+
+    function handleModalAddToCart() {
+        if (!activeModalProduct) return;
+        const item = {
+            lineId: "p_" + Date.now(),
+            kind: "product",
+            productId: activeModalProduct.id,
+            options: JSON.parse(JSON.stringify(selectedModalOptions)),
+            qty: activeModalQty,
+            notes: $("modalNotes").value.trim().slice(0, 200)
+        };
+        cart.push(item);
+        saveCart();
+        updateCartUI();
+        closeModal();
+        showToast(`${activeModalQty} × ${L(activeModalProduct.name)}`);
+        trackEvent("add_to_cart", { product: activeModalProduct.id });
+    }
+
+    function closeModal() {
+        $("modalBackdrop").classList.add("opacity-0");
+        $("modalCard").classList.add("scale-95", "opacity-0");
+        setTimeout(() => $("productModal").classList.add("invisible"), 200);
+    }
+
+    // =====================================================================
+    // TOAST
+    // =====================================================================
+    function showToast(label) {
+        const toast = $("toast");
+        $("toastText").textContent = `${t("added")}: ${label}`;
+        toast.classList.remove("opacity-0", "-translate-y-4");
+        toast.classList.add("pointer-events-auto");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(hideToast, 3500);
+    }
+
+    function hideToast() {
+        const toast = $("toast");
+        toast.classList.add("opacity-0", "-translate-y-4");
+        toast.classList.remove("pointer-events-auto");
+    }
+
+    // =====================================================================
+    // CARRITO
+    // =====================================================================
+    function updateCartUI() {
+        const container = $("cartItemsContainer");
+        $("cartCount").textContent = cart.reduce((a, i) => a + i.qty, 0);
+
+        if (cart.length === 0) {
+            container.innerHTML = `
+                <div class="flex flex-col items-center justify-center text-center p-6 text-brand-dark/75 space-y-3">
+                    <i data-lucide="shopping-bag" class="w-16 h-16 text-brand-caramel/60"></i>
+                    <p class="font-title font-bold text-lg text-brand-cacao">${escapeHTML(t("cartEmpty"))}</p>
+                    <p class="text-sm">${escapeHTML(t("cartEmptyText"))}</p>
+                </div>`;
+        } else {
+            container.innerHTML = cart.map((item, idx) => {
+                const d = describeLine(item);
+                return `
+                <div class="bg-white p-4 rounded-2xl border border-brand-caramel/20 shadow-sm space-y-2">
+                    <div class="flex justify-between items-start gap-2">
+                        <div>
+                            <h4 class="font-title font-bold text-brand-cacao text-sm">${escapeHTML(d.name)}</h4>
+                            <span class="text-xs text-brand-terracotta font-bold">${money(d.unit)} ${escapeHTML(t("each"))}</span>
+                        </div>
+                        <button type="button" data-action="remove" data-idx="${idx}" class="text-red-600 hover:text-red-700 p-1" aria-label="${escapeHTML(t("remove"))}">
+                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                    ${d.details.length ? `<div class="text-xs text-brand-dark/80 space-y-0.5 bg-brand-cream/50 p-2 rounded-lg">${d.details.map(x => `<div>• ${escapeHTML(x)}</div>`).join("")}</div>` : ""}
+                    ${item.notes ? `<p class="text-xs italic text-brand-cacao/80">${escapeHTML(t("note"))}: "${escapeHTML(item.notes)}"</p>` : ""}
+                    <div class="flex justify-between items-center pt-2 border-t border-brand-caramel/10">
+                        <div class="flex items-center border border-brand-caramel/30 rounded-lg overflow-hidden text-sm">
+                            <button type="button" data-action="qty-minus" data-idx="${idx}" class="px-2.5 py-1 font-bold bg-brand-cream hover:bg-brand-caramel/20" aria-label="${escapeHTML(t("less"))}">-</button>
+                            <span class="px-2.5 py-1 font-bold">${item.qty}</span>
+                            <button type="button" data-action="qty-plus" data-idx="${idx}" class="px-2.5 py-1 font-bold bg-brand-cream hover:bg-brand-caramel/20" aria-label="${escapeHTML(t("more"))}">+</button>
+                        </div>
+                        <span class="font-title font-extrabold text-sm text-brand-cacao">${money(d.unit * item.qty)}</span>
+                    </div>
+                </div>`;
+            }).join("");
+        }
+
+        const total = cart.reduce((a, i) => a + describeLine(i).unit * i.qty, 0);
+        $("cartTotal").textContent = money(total);
+        $("checkoutForm").classList.toggle("hidden", cart.length === 0);
+        $("checkoutWhatsAppBtn").disabled = cart.length === 0;
+        updateDeliveryFields();
+        refreshIcons();
+    }
+
+    function changeCartQty(idx, delta) {
+        if (!cart[idx]) return;
+        cart[idx].qty = Math.min(99, cart[idx].qty + delta);
+        if (cart[idx].qty <= 0) cart.splice(idx, 1);
+        saveCart();
+        updateCartUI();
+    }
+
+    function removeCartItem(idx) {
+        cart.splice(idx, 1);
+        saveCart();
+        updateCartUI();
+    }
+
+    function openCart() {
+        toggleMobileMenu(false);
+        hideToast();
+        const drawer = $("cartDrawer");
+        drawer.classList.remove("invisible");
+        setTimeout(() => {
+            $("cartBackdrop").classList.remove("opacity-0");
+            drawer.querySelector(".id-cart-panel").classList.remove("translate-x-full");
+            $("closeCartBtn").focus();
+        }, 10);
+    }
+
+    function closeCart() {
+        const drawer = $("cartDrawer");
+        $("cartBackdrop").classList.add("opacity-0");
+        drawer.querySelector(".id-cart-panel").classList.add("translate-x-full");
+        setTimeout(() => drawer.classList.add("invisible"), 300);
+    }
+
+    // =====================================================================
+    // ENTREGA: MÉTODO, DÍA Y HORA
+    // =====================================================================
+    function renderDeliveryMethods() {
+        const sel = $("deliveryMethod");
+        const prev = sel.value || CONFIG.DELIVERY_METHODS[0].id;
+        sel.innerHTML = CONFIG.DELIVERY_METHODS.map(m => `<option value="${m.id}" ${m.id === prev ? "selected" : ""}>${escapeHTML(m[lang])}</option>`).join("");
+        updateDeliveryFields();
+    }
+
+    function currentMethod() {
+        return CONFIG.DELIVERY_METHODS.find(m => m.id === $("deliveryMethod").value) || CONFIG.DELIVERY_METHODS[0];
+    }
+
+    function updateDeliveryFields() {
+        const isDelivery = currentMethod().delivery;
+        $("deliveryFields").classList.toggle("hidden", !isDelivery);
+        $("shippingRow").classList.toggle("hidden", !isDelivery || cart.length === 0);
+        $("totalLabel").textContent = t(isDelivery ? "subtotal" : "total");
+    }
+
+    function slotsForDate(date) {
+        const slots = [];
+        const now = new Date();
+        const minTime = new Date(now.getTime() + 45 * 60000); // al menos 45 min de anticipación
+        for (let m = CONFIG.OPEN_HOUR * 60; m < CONFIG.CLOSE_HOUR * 60; m += CONFIG.SLOT_MINUTES) {
+            const d = new Date(date);
+            d.setHours(Math.floor(m / 60), m % 60, 0, 0);
+            if (d >= minTime) slots.push(d);
+        }
+        return slots;
+    }
+
+    function openDates(count = 8) {
+        const out = [];
+        const d = new Date();
+        d.setHours(0, 0, 0, 0);
+        for (let i = 0; out.length < count && i < 60; i++) {
+            if (CONFIG.OPEN_DAYS.includes(d.getDay()) && slotsForDate(d).length) out.push(new Date(d));
+            d.setDate(d.getDate() + 1);
+        }
+        return out;
+    }
+
+    function formatDate(d, l = lang) {
+        const isToday = d.toDateString() === new Date().toDateString();
+        const txt = d.toLocaleDateString(l === "es" ? "es-US" : "en-US", { weekday: "long", month: "short", day: "numeric" });
+        return (isToday ? `${I18N[l].today} – ` : "") + txt.charAt(0).toUpperCase() + txt.slice(1);
+    }
+
+    function formatTime(d) {
+        return d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
+    }
+
+    function renderDateOptions() {
+        const sel = $("deliveryDate");
+        const prev = sel.value;
+        const dates = openDates();
+        sel.innerHTML = dates.map(d => {
+            return `<option value="${d.getTime()}" ${String(d.getTime()) === prev ? "selected" : ""}>${escapeHTML(formatDate(d))}</option>`;
+        }).join("");
+        renderTimeOptions();
+    }
+
+    function renderTimeOptions() {
+        const sel = $("deliveryTime");
+        const prev = sel.value;
+        const ts = Number($("deliveryDate").value);
+        const slots = ts ? slotsForDate(new Date(ts)) : [];
+        sel.innerHTML = `<option value="">${escapeHTML(t("asap"))}</option>` +
+            slots.map(s => `<option value="${s.getTime()}" ${String(s.getTime()) === prev ? "selected" : ""}>${formatTime(s)}</option>`).join("");
+    }
+
+    // =====================================================================
+    // PEDIDO POR WHATSAPP (el mensaje siempre va en español para el negocio)
+    // =====================================================================
+    function showFormError(msg, fieldId) {
+        const box = $("formError");
+        box.textContent = msg;
+        box.classList.remove("hidden");
+        if (fieldId) $(fieldId).focus();
+    }
+
+    function handleCheckoutWhatsApp() {
+        $("formError").classList.add("hidden");
+        if (cart.length === 0) return showFormError(t("errEmpty"));
+
+        const name = $("customerName").value.trim();
+        const method = currentMethod();
+        const address = $("customerAddress").value.trim();
+        const phone = $("customerPhone").value.trim();
+
+        if (!name) return showFormError(t("errName"), "customerName");
+        if (method.delivery) {
+            if (!address) return showFormError(t("errAddress"), "customerAddress");
+            if (phone.replace(/\D/g, "").length < 10) return showFormError(t("errPhone"), "customerPhone");
+        }
+
+        const dateTs = Number($("deliveryDate").value);
+        const timeTs = Number($("deliveryTime").value);
+        const when = dateTs
+            ? `${formatDate(new Date(dateTs), "es")} – ${timeTs ? formatTime(new Date(timeTs)) : I18N.es.asap}`
+            : I18N.es.toConfirm;
+
+        let msg = `*NUEVO PEDIDO - OBLEYORK NYC*\n`;
+        msg += `-----------------------------------\n`;
+        msg += `👤 *Cliente:* ${name}\n`;
+        msg += `🛵 *Método:* ${method.es}\n`;
+        if (method.delivery) {
+            msg += `📍 *Dirección:* ${address}\n`;
+            msg += `📞 *Teléfono:* ${phone}\n`;
+        }
+        msg += `⏰ *Cuándo:* ${when}\n`;
+        if (lang === "en") msg += `🌐 *Idioma del cliente:* inglés\n`;
+        msg += `-----------------------------------\n\n`;
+        msg += `📦 *DETALLE DEL PEDIDO:*\n\n`;
+
+        let total = 0;
+        cart.forEach((item, i) => {
+            const d = describeLine(item, "es");
+            const sub = d.unit * item.qty;
+            total += sub;
+            msg += `*${i + 1}. ${d.name}* (x${item.qty})\n`;
+            msg += `   Precio unitario: ${money(d.unit)}\n`;
+            d.details.forEach(x => { msg += `   - ${x}\n`; });
+            if (item.notes) msg += `   - _Nota: ${item.notes}_\n`;
+            msg += `   *Subtotal:* ${money(sub)}\n\n`;
+        });
+
+        msg += `-----------------------------------\n`;
+        msg += `💰 *${method.delivery ? "SUBTOTAL (sin envío)" : "TOTAL"}: ${money(total)}*\n`;
+        if (method.delivery) msg += `🚚 Envío: por confirmar según la zona\n`;
+        msg += `-----------------------------------\n\n`;
+        msg += `Por favor confirmen disponibilidad y total final. ¡Gracias!`;
+
+        trackEvent("order_sent", { items: cart.length, total: Math.round(total), method: method.id });
+        window.open(`https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
+
+        setTimeout(() => {
+            if (confirm(t("confirmClear"))) {
+                cart = [];
+                saveCart();
+                updateCartUI();
+                closeCart();
+            }
+        }, 800);
+    }
+
+    // =====================================================================
+    // GALERÍA, LIGHTBOX Y RESEÑAS
+    // =====================================================================
+    function renderGallery() {
+        $("galleryGrid").innerHTML = CONFIG.GALLERY.map(g => `
+            <button type="button" data-action="lightbox" data-src="${IMG + g.src}" data-alt="${escapeHTML(L(g.alt))}" class="relative h-48 md:h-64 rounded-2xl overflow-hidden cursor-pointer group shadow-md">
+                <img src="${IMG + g.src}" alt="${escapeHTML(L(g.alt))}" loading="lazy" decoding="async" width="675" height="1200" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <span class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                    <i data-lucide="maximize-2" class="w-6 h-6"></i>
+                </span>
+            </button>`).join("");
+        refreshIcons();
+    }
+
+    function openLightbox(src, alt) {
+        $("lightboxImg").src = src;
+        $("lightboxImg").alt = alt || "";
+        const modal = $("lightboxModal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        $("closeLightbox").focus();
+    }
+
+    function closeLightbox() {
+        const modal = $("lightboxModal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+    }
+
+    function renderReviews() {
+        $("reviewsContainer").innerHTML = CONFIG.REVIEWS.map(r => `
+            <figure class="bg-brand-cream/90 p-6 rounded-2xl border border-brand-caramel/20 space-y-3">
+                <div class="flex text-amber-600 gap-1" aria-label="${r.rating}/5">
+                    ${Array(r.rating).fill('<i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>').join("")}
+                </div>
+                <blockquote class="text-sm text-brand-dark/85 italic">"${escapeHTML(r.comment)}"</blockquote>
+                <figcaption class="font-title font-bold text-sm text-brand-cacao">— ${escapeHTML(r.name)}</figcaption>
+            </figure>`).join("");
+        refreshIcons();
+    }
+    </script>
+</body>
+</html>
